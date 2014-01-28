@@ -1,0 +1,9 @@
+parameters:
+    link_button.form.extension.class: SymfonyContrib\Bundle\LinkButtonBundle\Form\Extension\LinkButtonExtension
+
+services:
+    link_button.form.extension:
+        class: %link_button.form.extension.class%
+        tags:
+            - name: form.type_extension
+              alias: button

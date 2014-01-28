@@ -1,0 +1,30 @@
+{
+    "name": "symfonycontrib/link-button-bundle",
+    "type": "symfony-bundle",
+    "description": "Symfony2 form button as a link (ex. Cancel action).",
+    "keywords": ["Symfony", "form", "button"],
+    "homepage": "http://symfonycontrib.com/",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alan Doucette",
+            "email": "dragonwize@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "symfony/symfony": "~2.3"
+    },
+    "autoload": {
+        "psr-0": {
+            "SymfonyContrib\\Bundle\\LinkButtonBundle\\": ""
+        }
+    },
+    "target-dir": "SymfonyContrib/Bundle/LinkButtonBundle",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}
