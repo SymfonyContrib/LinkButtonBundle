@@ -8,7 +8,6 @@ namespace SymfonyContrib\Bundle\LinkButtonBundle\Form\Extension;
 use Symfony\Component\Form\AbstractTypeExtension;
 use Symfony\Component\Form\FormView;
 use Symfony\Component\Form\FormInterface;
-use Symfony\Component\PropertyAccess\PropertyAccess;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
 class LinkButtonExtension extends AbstractTypeExtension
@@ -27,7 +26,7 @@ class LinkButtonExtension extends AbstractTypeExtension
      */
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
-        $resolver->setOptional(array('url'));
+        $resolver->setOptional(['url']);
     }
 
     /**

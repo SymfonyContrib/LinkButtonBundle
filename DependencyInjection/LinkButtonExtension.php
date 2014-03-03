@@ -13,12 +13,12 @@ use Symfony\Component\DependencyInjection\Extension\PrependExtensionInterface;
  *
  * To learn more see {@link http://symfony.com/doc/current/cookbook/bundles/extension.html}
  */
-class SymfonyContribLinkButtonExtension extends Extension implements PrependExtensionInterface
+class LinkButtonExtension extends Extension implements PrependExtensionInterface
 {
     /**
      * @var string Template file for the link button.
      */
-    public $formTemplate = 'SymfonyContribLinkButtonBundle:Form:button.html.twig';
+    public $formTemplate = 'LinkButtonBundle:Form:button.html.twig';
 
     /**
      * {@inheritDoc}
