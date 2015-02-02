@@ -1,9 +1,17 @@
 {% block button_widget %}
     {% spaceless %}
-        {% if label is empty %}
-            {% set label = name|humanize %}
-        {% endif %}
+        {% if label is empty -%}
+            {%- if label_format is not empty -%}
+                {% set label = label_format|replace({
+                '%name%': name,
+                '%id%': id,
+                }) %}
+            {%- else -%}
+                {% set label = name|humanize %}
+            {%- endif -%}
+        {%- endif -%}
         {% if url is empty %}
+            {% set attr = attr|merge({class: 'btn ' ~ attr.class|default('btn-default')}) %}
             <button type="{{ type|default('button') }}" {{ block('button_attributes') }}>{{ label|trans({}, translation_domain) }}</button>
         {% else %}
             <a href="{{ url }}" {{ block('button_attributes') }}>{{ label|trans({}, translation_domain) }}</a>
