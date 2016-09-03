@@ -1,14 +1,12 @@
 <?php
-/**
- *
- */
 
 namespace SymfonyContrib\Bundle\LinkButtonBundle\Form\Extension;
 
 use Symfony\Component\Form\AbstractTypeExtension;
+use Symfony\Component\Form\Extension\Core\Type\ButtonType;
 use Symfony\Component\Form\FormView;
 use Symfony\Component\Form\FormInterface;
-use Symfony\Component\OptionsResolver\OptionsResolverInterface;
+use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class LinkButtonExtension extends AbstractTypeExtension
 {
@@ -24,9 +22,9 @@ class LinkButtonExtension extends AbstractTypeExtension
     /**
      * {@inheritdoc}
      */
-    public function setDefaultOptions(OptionsResolverInterface $resolver)
+    public function configureOptions(OptionsResolver $resolver)
     {
-        $resolver->setOptional(['url']);
+        $resolver->setDefined(['url']);
     }
 
     /**
@@ -34,6 +32,6 @@ class LinkButtonExtension extends AbstractTypeExtension
      */
     public function getExtendedType()
     {
-        return 'button';
+        return ButtonType::class;
     }
 }

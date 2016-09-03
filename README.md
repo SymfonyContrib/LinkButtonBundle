@@ -1,7 +1,7 @@
 Symfony Contrib Link Button Bundle
 ==================================
 
-This bundle provides an form extension of a form button to allow an HTML "<a>"
+This bundle provides an form extension for the button type to allow an HTML "<a>"
 tag as a button. For example, a cancel link on a form.
 
 Installation
@@ -12,7 +12,7 @@ Installation
 ```
 "require": {
     ...
-    "symfonycontrib/link-button-bundle": "~1.0"
+    "symfonycontrib/link-button-bundle": "^2.0"
 }
 ```
 
